@@ -47,7 +47,7 @@ class CloudKitUserViewModel: ObservableObject {
     
 }
     func discoveriCloudUser(id: CKRecord.ID) {
-        CKContainer.default().discoverUserIdentity(withUserRecordID: id) { returnedIdentity, returnedError in 
+        CKContainer.default().discoverUserIdentity(withUserRecordID: id) { returnedIdentity, returnedError in
             
         }
     }
