@@ -11,6 +11,7 @@ import SwiftUI
 struct Push_NotificationApp: App {
     var body: some Scene {
         WindowGroup {
+            CloudKitUser()
             ContentView()
         }
     }
