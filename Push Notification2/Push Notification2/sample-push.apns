@@ -1,0 +1,10 @@
+{
+    "Simulator Target Bundle": "br.com.keity.Push-Notification2",
+    "aps": {
+        "alert": {
+            "title": "This is a test notification title",
+            "body": "This is a test notification body"
+        }
+    }
+}
+$
