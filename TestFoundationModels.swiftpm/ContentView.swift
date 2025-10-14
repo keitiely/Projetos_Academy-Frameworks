@@ -7,7 +7,7 @@ struct ContentView: View {
     @State var question = "" //para receber o prompt do usuario
     @State var reply = ""
     
-//criando uma sessao fora do botao para cada sessao manter o historico e o contexto, antes estava no clique co botao o que pode desperdiça recurso e sempre reinicia conversa
+//criando uma sessao fora do botao para cada sessao manter o historico e o contexto, antes estava no clique com botao o que pode desperdiçar recurso e sempre reinicia conversa
     @State private var session = LanguageModelSession(
         instructions : Instructions{
                 """
@@ -28,10 +28,10 @@ struct ContentView: View {
             {
                 TextField("Question", text: $question)
                 
-                Button("Ask Question"){ if #available(iOS 26.0, *) {
+                Button("Ask Question"){
     
                         Task {
-                            do {//metodo que faz o modelo gerar uma resposta a partir do prompt do usuário e guarda com o await
+                            do {//metodo que faz o modelo gerar uma resposta a partir do prompt do usuário e guarda com o await e tambem seguindo as instruções
                                 let response = try await session.respond(to: question)
                                 reply = response.content
                                 //Guarda o texto da resposta no estado reply, que é exibido na tela com o Text(reply).
@@ -39,7 +39,6 @@ struct ContentView: View {
                                 print(error)
                             }
                         }
-                    }
                 }
                 Text(reply)
                 

@@ -4,7 +4,11 @@ import SwiftUI
 struct MyApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if #available(iOS 26.0, *) {
+                ContentView()
+            } else {
+                // Fallback on earlier versions
+            }
         }
     }
 }
