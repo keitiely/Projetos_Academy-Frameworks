@@ -2,37 +2,43 @@ import SwiftUI
 import FoundationModels
 
 
+@available(iOS 26.0, *)
 struct ContentView: View {
-    @State var question = ""
+    @State var question = "" //para receber o prompt do usuario
     @State var reply = ""
+    
+//criando uma sessao fora do botao para cada sessao manter o historico e o contexto, antes estava no clique com botao o que pode desperdiçar recurso e sempre reinicia conversa
+    @State private var session = LanguageModelSession(
+        instructions : Instructions{
+                """
+              Voce é um analisador de musicas que ira listar somente as 5 muiscas principais do artista
+              sua resposta precisa ser, escreva literalmete assim:
+                            
+               Top 1 <musica tal>
+               Top 2 <musica tal>
+               outros top ate 5
+                            
+              """
+        }
+    )
     
     var body: some View {
         Form{
-            Section("Oh-Device LLM")
+            Section("Oh-Device LLM")//Modelo de Linguagem no Dispositivo.
             {
                 TextField("Question", text: $question)
                 
-                Button("Ask Question"){ if #available(iOS 26.0, *) {
-                let instructions = Instructions{
-                    """
-                    Voce é um analisador de musicas que ira listar somente as 5 muiscas principais do artista
-                    sua resposta precisa ser, escreva literalmete assim:
-                
-                    Top 1 <musica tal>
-                    Top 2 <musica tal>
-                    outros top ate 5
-                
-            """ }
-              let session = LanguageModelSession(instructions: instructions)
+                Button("Ask Question"){
+    
                         Task {
-                            do {
+                            do {//metodo que faz o modelo gerar uma resposta a partir do prompt do usuário e guarda com o await e tambem seguindo as instruções
                                 let response = try await session.respond(to: question)
                                 reply = response.content
+                                //Guarda o texto da resposta no estado reply, que é exibido na tela com o Text(reply).
                             } catch {
                                 print(error)
                             }
                         }
-                    }
                 }
                 Text(reply)
                 
@@ -41,5 +47,9 @@ struct ContentView: View {
     }
 }
 #Preview {
-    ContentView()
+    if #available(iOS 26.0, *) {
+        ContentView()
+    } else {
+        // Fallback on earlier versions
+    }
 }
