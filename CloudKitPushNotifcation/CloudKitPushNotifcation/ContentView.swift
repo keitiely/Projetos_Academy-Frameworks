@@ -9,13 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        TabView {
+            CloudKitCrudBootcamp()
+                .tabItem {
+                    Label("Notas", systemImage: "note.text")
+                }
+            
+            CloudKitPushNotificationBootcamp()
+                .tabItem {
+                    Label("Notificações", systemImage: "bell")
+                }
         }
-        .padding()
     }
 }
 

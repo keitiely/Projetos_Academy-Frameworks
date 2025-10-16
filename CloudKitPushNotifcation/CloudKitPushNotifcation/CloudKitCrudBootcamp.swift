@@ -38,7 +38,7 @@ class CloudKitCrudBootcampViewModel: ObservableObject{
     private func addItem(name: String){
     //Cria um novo registro do tipo "Notes" para armazenar dados na tabela correspondente do CloudKit.
       let newNotes = CKRecord(recordType: "Notes")
-        newNotes["name"] = name // Define o valor do campo "name" desse registro com o valor da variável 'name
+        newNotes["name"] = name // Define o valor do campo "name" desse registro com o valor da variável 'name'
         saveItem(record: newNotes)//salvar o nosso registro nota
         
     }

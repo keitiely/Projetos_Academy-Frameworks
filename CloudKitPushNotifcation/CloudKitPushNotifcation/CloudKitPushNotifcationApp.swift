@@ -11,8 +11,9 @@ import SwiftUI
 struct CloudKitPushNotifcationApp: App {
     var body: some Scene {
         WindowGroup {
-            CloudKitCrudBootcamp()
-//            ContentView()
+//            CloudKitPushNotificationBootcamp()
+//            CloudKitCrudBootcamp()
+            ContentView()
         }
     }
 }
