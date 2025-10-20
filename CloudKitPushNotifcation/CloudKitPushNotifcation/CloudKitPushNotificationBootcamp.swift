@@ -38,7 +38,7 @@ class CloudKitPushNotificationBootcampViewModel: ObservableObject {
         
         let predicate = NSPredicate(value: true)
         
-        let subscription = CKQuerySubscription(recordType: "Notes", predicate: predicate, subscriptionID: "note_add_to_database", options: .firesOnRecordCreation) //.firesOnRecordCreation toda vez que criar receber notificacao
+        let subscription = CKQuerySubscription(recordType: "Notes", predicate: predicate, subscriptionID: "note_add_to_database", options: .firesOnRecordCreation) //.firesOnRecordCreation toda vez que criar enviar notificacao
         
         //aparencia da notificacao
         let notification = CKSubscription.NotificationInfo()

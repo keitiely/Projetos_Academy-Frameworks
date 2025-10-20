@@ -34,6 +34,8 @@ class CloudKitCrudBootcampViewModel: ObservableObject{
         //passando o texto para a funcao
         addItem(name: text)
     }
+    
+    
     //funacao para adicionar o item no Banco de Dados
     private func addItem(name: String){
     //Cria um novo registro do tipo "Notes" para armazenar dados na tabela correspondente do CloudKit.
@@ -69,7 +71,7 @@ class CloudKitCrudBootcampViewModel: ObservableObject{
         let query = CKQuery(recordType: "Notes", predicate: predicate)
         query.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)] //ordem de horario
         let queryOperation = CKQueryOperation(query: query)
-//        queryOperation.resultsLimit = 2 //quantidade limite para mostrar de dados
+        queryOperation.resultsLimit = 2 //quantidade limite para mostrar de dados
         
         var returnedItems: [NoteModel] = []
         
