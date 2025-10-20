@@ -54,7 +54,7 @@ struct ContentView: View {
                             
                     )
                     .foregroundStyle(Color.pink.gradient)
-                    .cornerRadius(6)
+                    .cornerRadius(5)
                 }
             }
             .frame(height: 180)
