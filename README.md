@@ -13,6 +13,8 @@ Repositório com pequenos projetos criados para estudar frameworks do ecossistem
 | 🤖&nbsp;TestFoundationModels&nbsp; | Teste de Playground do Foundation Model com pergunta e uma resposta do Modelo. |
 | 🤖&nbsp;FoundationModelsEstruturado&nbsp; | Explorando mais o Foundation Model com o Generable e o Guide (ainda em desenvolvimento). |
 | 🖼️&nbsp;MonthlyWidget&nbsp; | Widgets personalizado para cada mês. |
+| 📊&nbsp;BarChart&nbsp; | Exibe um gráfico de barras com o total de visualizações mensais usando o Swift Charts. |
+| 🗺️&nbsp;Maps-iOS17&nbsp; | Exibe um mapa interativo com MapKit, marcadores personalizados (Apple Park e Panama Park), controle de localização do usuário, botões de mapa e visualização Look Around integrada. |
 
 
 
