@@ -36,12 +36,13 @@ class PushManagerViewModel: NSObject, ObservableObject{
     
     
     //Enviar Mensagem
-    func sendMessage(senderID: String, receiverID: String, message: String){
+    func sendMessage(senderID: String, receiverID: String, message: String, senderName: String){
         let record = CKRecord(recordType: "Messages")
         
-        record["senderID"] = senderID
-        record["receiverID"] = receiverID
+        record["senderID"] = senderID.normalized()
+        record["receiverID"] = receiverID.normalized()
         record["message"] = message
+        record["senderName"] = senderName
         
         DispatchQueue.global().async {
             self.db.save(record) { _, error in
@@ -58,17 +59,22 @@ class PushManagerViewModel: NSObject, ObservableObject{
     }
     
     
-    //Assinar notificação
+    //Assinar notificação em tese ele aguarda se chegar notificacao no cloud do usuario ele mostra
     func subscribeToMessages(for userID: String) {
-        let predicate = NSPredicate(format: "receiverID == %@", userID) //para pegar de acordo com o numero de telefone um id do usuario
+        let normalizedUserID = userID.normalized()
+        let subscriptionID = "messages_for_\(normalizedUserID)"
+        
+        
+            
+        let predicate = NSPredicate(format: "receiverID == %@", normalizedUserID) //para pegar de acordo com o numero de telefone um id do usuario
         let subscription = CKQuerySubscription(recordType: "Messages",
                                                predicate: predicate,
-                                               subscriptionID: "messages_for_\(userID)",
+                                               subscriptionID: subscriptionID,
                                                options: .firesOnRecordCreation)//.firesOnRecordCreation toda vez que criar enviar notificacao
         
         let notificationInfo = CKSubscription.NotificationInfo()
-        notificationInfo.title = "💧 Nova mensagem!"
-        notificationInfo.alertLocalizationKey = "%@"
+        notificationInfo.titleLocalizationKey = "💧 %@ "
+        notificationInfo.titleLocalizationArgs = ["senderName"]
         notificationInfo.alertLocalizationArgs = ["message"]
         notificationInfo.soundName = "default"
 

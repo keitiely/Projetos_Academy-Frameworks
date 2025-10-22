@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>NSUserNotificationUsageDescription</key>
-	<string>O app envia lembretes e mensagens para você e seus contatos.</string>
+	<string>Usamos seus contatos para mostrar amigos que também usam o app e permitir o envio de mensagens personalizadas.</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>remote-notification</string>
