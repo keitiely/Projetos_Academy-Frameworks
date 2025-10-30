@@ -15,6 +15,7 @@ Repositório com pequenos projetos criados para estudar frameworks do ecossistem
 | 🖼️&nbsp;MonthlyWidget&nbsp; | Widgets personalizado para cada mês. |
 | 📊&nbsp;BarChart&nbsp; | Exibe um gráfico de barras com o total de visualizações mensais usando o Swift Charts. |
 | 🗺️&nbsp;Maps-iOS17&nbsp; | Exibe um mapa interativo com MapKit, marcadores personalizados (Apple Park e Panama Park), controle de localização do usuário, botões de mapa e visualização Look Around integrada. |
+| 📲&nbsp;WaterTest&nbsp; | Implementa Push Notification com o framework Contatos, onde o usuário envia a notificação somente para seu contato selecionado. |
 
 
 
