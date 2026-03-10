@@ -36,7 +36,7 @@ struct ContentView: View {
             
             
             Chart {
-                RuleMark(y: .value("Goal", 80000))
+                BarMark(y: .value("Goal", 80000))
                     .foregroundStyle(Color.mint)
                     .lineStyle(StrokeStyle(lineWidth: 1, dash: [5]))
 //                    .annotation (alignment: .leading){
