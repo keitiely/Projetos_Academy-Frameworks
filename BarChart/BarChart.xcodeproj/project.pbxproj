@@ -6,11 +6,27 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		A293BF082F5FA23E001D5245 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A2D59B1D2EA2D9A200D1E6A4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A2D59B242EA2D9A200D1E6A4;
+			remoteInfo = BarChart;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		A293BF042F5FA23E001D5245 /* testebarchart.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testebarchart.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2D59B252EA2D9A200D1E6A4 /* BarChart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarChart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		A293BF052F5FA23E001D5245 /* testebarchart */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = testebarchart;
+			sourceTree = "<group>";
+		};
 		A2D59B272EA2D9A200D1E6A4 /* BarChart */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = BarChart;
@@ -19,6 +35,13 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A293BF012F5FA23E001D5245 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A2D59B222EA2D9A200D1E6A4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -33,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				A2D59B272EA2D9A200D1E6A4 /* BarChart */,
+				A293BF052F5FA23E001D5245 /* testebarchart */,
 				A2D59B262EA2D9A200D1E6A4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				A2D59B252EA2D9A200D1E6A4 /* BarChart.app */,
+				A293BF042F5FA23E001D5245 /* testebarchart.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,6 +73,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A293BF032F5FA23E001D5245 /* testebarchart */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A293BF0C2F5FA23E001D5245 /* Build configuration list for PBXNativeTarget "testebarchart" */;
+			buildPhases = (
+				A293BF002F5FA23E001D5245 /* Sources */,
+				A293BF012F5FA23E001D5245 /* Frameworks */,
+				A293BF022F5FA23E001D5245 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A293BF092F5FA23E001D5245 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				A293BF052F5FA23E001D5245 /* testebarchart */,
+			);
+			name = testebarchart;
+			packageProductDependencies = (
+			);
+			productName = testebarchart;
+			productReference = A293BF042F5FA23E001D5245 /* testebarchart.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		A2D59B242EA2D9A200D1E6A4 /* BarChart */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A2D59B302EA2D9A200D1E6A4 /* Build configuration list for PBXNativeTarget "BarChart" */;
@@ -77,9 +125,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 2600;
+				LastSwiftUpdateCheck = 2610;
 				LastUpgradeCheck = 2600;
 				TargetAttributes = {
+					A293BF032F5FA23E001D5245 = {
+						CreatedOnToolsVersion = 26.1.1;
+						TestTargetID = A2D59B242EA2D9A200D1E6A4;
+					};
 					A2D59B242EA2D9A200D1E6A4 = {
 						CreatedOnToolsVersion = 26.0.1;
 					};
@@ -100,11 +152,19 @@
 			projectRoot = "";
 			targets = (
 				A2D59B242EA2D9A200D1E6A4 /* BarChart */,
+				A293BF032F5FA23E001D5245 /* testebarchart */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A293BF022F5FA23E001D5245 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A2D59B232EA2D9A200D1E6A4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -115,6 +175,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A293BF002F5FA23E001D5245 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A2D59B212EA2D9A200D1E6A4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -124,7 +191,59 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		A293BF092F5FA23E001D5245 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A2D59B242EA2D9A200D1E6A4 /* BarChart */;
+			targetProxy = A293BF082F5FA23E001D5245 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		A293BF0A2F5FA23E001D5245 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PMFLCRL2L8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.keity.testebarchart;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BarChart.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BarChart";
+			};
+			name = Debug;
+		};
+		A293BF0B2F5FA23E001D5245 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PMFLCRL2L8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.keity.testebarchart;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BarChart.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BarChart";
+			};
+			name = Release;
+		};
 		A2D59B2E2EA2D9A200D1E6A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -313,6 +432,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A293BF0C2F5FA23E001D5245 /* Build configuration list for PBXNativeTarget "testebarchart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A293BF0A2F5FA23E001D5245 /* Debug */,
+				A293BF0B2F5FA23E001D5245 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A2D59B202EA2D9A200D1E6A4 /* Build configuration list for PBXProject "BarChart" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
